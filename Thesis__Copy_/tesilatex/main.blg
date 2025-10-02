@@ -1,0 +1,21 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'main.blg'
+[256] biber-MSWIN64:342> INFO - === 
+[357] Biber.pm:421> INFO - Reading 'main.bcf'
+[688] Biber.pm:999> INFO - Using all citekeys in bib section 0
+[731] Biber.pm:4487> INFO - Processing section 0
+[755] Biber.pm:4678> INFO - Looking for bibtex file 'bib/Bibliography.bib' for section 0
+[875] bibtex.pm:1713> INFO - LaTeX decoding ...
+[969] bibtex.pm:1519> INFO - Found BibTeX data source 'bib/Bibliography.bib'
+[1437] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1437] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1438] Biber.pm:4307> INFO - Sorting list 'nty/apasortcite//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[1438] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[1575] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1576] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1576] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[1576] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[1663] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1745] bbl.pm:779> INFO - Output to main.bbl
+[1745] Biber.pm:132> WARN - legacy month field 'October' in entry 'series' is not an integer - this will probably not sort properly.
+[1745] Biber.pm:134> INFO - WARNINGS: 1
