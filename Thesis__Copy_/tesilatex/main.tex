@@ -18,10 +18,16 @@
 %*******************************************************
 % Packages
 %*******************************************************
-
+%\usepackage[a4paper,top=3cm,bottom=3cm,left=3cm,right=3cm]{geometry}
+\usepackage{geometry}
 % Typographical rules for the English language
 \usepackage[english]{babel}
+% Provides the \thetitle and other useful macros
+\usepackage{titling}
 
+% Needed for the transparent full-page background logo
+\usepackage{eso-pic}
+\usepackage{transparent}
 % Font-related packages
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -145,7 +151,7 @@
 \appendix
 \label{appendix}
 
-\input{back/Appendix1}
+\input{back/questionario.tex}
 \input{back/Appendix2}
 \input{back/Appendix3}
 
