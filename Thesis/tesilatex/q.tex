@@ -1,0 +1,202 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx} % Fondamentale per le tabelle larghe
+\usepackage{array}
+\usepackage{booktabs} 
+\usepackage{geometry}
+
+% Margini ottimizzati
+\geometry{a4paper, top=1cm, bottom=1.5cm, left=1.5cm, right=1.5cm}
+
+\begin{document}
+
+% --- INTESTAZIONE ---
+\noindent
+\begin{minipage}{0.65\textwidth}
+    {\Large \textbf{QUESTIONARIO}}
+\end{minipage}
+\hfill
+\begin{minipage}{0.30\textwidth}
+    \raggedleft
+    \textbf{Classe:} \underline{\hspace{1cm}} \textbf{Età:} \underline{\hspace{0.8cm}}
+\end{minipage}
+
+\vspace{0.3cm}
+
+% --- BOX CODICE UNIFICATO ---
+\noindent
+\fbox{
+    \begin{minipage}{0.96\textwidth}
+        \centering
+        \vspace{0.1cm}
+        \small
+        \textbf{CODICE}\\
+        \footnotesize
+        Non scrivere il tuo nome. Inserisci le lettere/numeri indicati nelle caselle qui sotto.\\
+        \textit{Esempio: \textbf{Bi}anchi \textbf{Ma}rco, nato a Settembre (09) del 20\textbf{12} $\to$ BIMA0912}
+        
+        \vspace{0.2cm}
+        \renewcommand{\arraystretch}{1.2}
+        \setlength{\tabcolsep}{0pt} 
+        
+        % Tabella unica a 8 colonne
+        \begin{tabular}{| *{8}{>{\centering\arraybackslash}p{1.4cm}|} }
+            \hline
+            \multicolumn{2}{|c|}{\footnotesize \textbf{COGNOME}} & 
+            \multicolumn{2}{c|}{\footnotesize \textbf{NOME}} & 
+            \multicolumn{2}{c|}{\footnotesize \textbf{MESE}} & 
+            \multicolumn{2}{c|}{\footnotesize \textbf{ANNO}} \\
+            
+            \multicolumn{2}{|c|}{\tiny (Prime 2 lettere)} & 
+            \multicolumn{2}{c|}{\tiny (Prime 2 lettere)} & 
+            \multicolumn{2}{c|}{\tiny (01-12)} & 
+            \multicolumn{2}{c|}{\tiny (es. 12)} \\
+            \hline
+            \rule{0pt}{1cm} & & & & & & & \\
+            \hline
+        \end{tabular}
+        \vspace{0.1cm}
+    \end{minipage}
+}
+
+\vspace{0.2cm}
+\noindent{\small \textbf{Genere:} $\bigcirc$ Femmina \quad $\bigcirc$ Maschio \quad $\bigcirc$ Altro \quad $\bigcirc$ Preferisco non rispondere }
+\vspace{0.2cm}
+\hrule
+% --- FINE INTESTAZIONE ---
+
+\vspace{0.3cm}
+
+\noindent\textbf{Istruzioni:} Immagina di trovarti nelle situazioni descritte qui sotto. Valuta ogni situazione in termini di quanta ansia proveresti, mettendo una \textbf{crocetta} nella colonna che corrisponde al tuo grado di ansia. Non ci sono risposte giuste o sbagliate.
+\newline
+\renewcommand{\arraystretch}{1.4} 
+\setlength{\tabcolsep}{3pt} 
+
+% TABELLA 1 - CORRETTA CON TABULARX (Niente resizebox)
+\noindent
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Situazione}} & \multicolumn{5}{c|}{\textbf{Grado di ansia}} \\
+\cline{2-6}
+\multicolumn{1}{|c|}{} & \textbf{\scriptsize Molto poca} & \textbf{\scriptsize Poca} & \textbf{\scriptsize Moderata} & \textbf{\scriptsize Abbastanza} & \textbf{\scriptsize Molta} \\
+\hline
+Usare le tabelline e gli schemi per svolgere esercizi di matematica &   &   &   &   &   \\
+\hline
+Pensare alla verifica scritta di matematica &   &   &   &   &   \\
+\hline
+Seguire con attenzione l'insegnante che risolve alla lavagna un'operazione difficile &   &   &   &   &   \\
+\hline
+Fare una verifica scritta di matematica &   &   &   &   &   \\
+\hline
+Svolgere per casa molti esercizi difficili di matematica &   &   &   &   &   \\
+\hline
+Seguire con attenzione la lezione di matematica &   &   &   &   &   \\
+\hline
+Seguire un compagno che risolve un esercizio di matematica &   &   &   &   &   \\
+\hline
+Essere interrogato “a sorpresa” in matematica &   &   &   &   &   \\
+\hline
+Affrontare un nuovo argomento di matematica &   &   &   &   &   \\
+\hline
+\end{tabularx}
+
+\vspace{0.5cm}
+
+\noindent\textbf{Istruzioni:} Valuta quanto pensi di essere bravo/a ad affrontare le diverse situazioni. Metti una \textbf{crocetta} nella colonna corrispondente. Non ci sono risposte giuste o sbagliate.
+\newline
+
+% TABELLA 2 - CORRETTA CON TABULARX
+\noindent
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|c|}
+  \hline
+  \textbf{Quanto sei bravo/a...} & \textbf{\scriptsize Per niente} & \textbf{\scriptsize Poco} & \textbf{\scriptsize Medio} & \textbf{\scriptsize Abbastanza} & \textbf{\scriptsize Molto} \\
+  \hline
+  Nell'imparare la matematica & & & & & \\
+  \hline
+  Nel risolvere problemi matematici & & & & & \\
+  \hline
+  Nel calcolo a mente & & & & & \\
+  \hline
+  Nel risolvere operazioni in colonna & & & & & \\
+  \hline
+  Nelle tabelline & & & & & \\
+  \hline
+  Nel finire i compiti che ti sono stati assegnati per casa & & & & & \\
+  \hline 
+  Nel concentrarti nello studio della matematica senza farti distrarre & & & & & \\
+  \hline
+  Impegnarti nello studio della matematica quando hai altre cose interessanti da fare & & & & & \\
+  \hline
+  Organizzarti nelle attività scolastiche & & & & & \\
+  \hline
+  Interessarti nelle materie scolastiche & & & & & \\
+  \hline
+\end{tabularx}
+
+\newpage
+
+
+\noindent\textbf{Istruzioni:} Valuta quanto sei d'accordo con le affermazioni proposte di seguito mettendo una \textbf{crocetta} nella casella che corrisponde al tuo pensiero. Non ci sono risposte giuste o sbagliate.
+\newline
+
+% TABELLA 3 - CORRETTA CON TABULARX
+\noindent
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|c|}
+  \hline
+  \textbf{Quanto sei d'accordo?} & \textbf{\scriptsize Per niente} & \textbf{\scriptsize Poco} & \textbf{\scriptsize Medio} & \textbf{\scriptsize Abbastanza} & \textbf{\scriptsize Molto} \\
+  \hline
+  Mi piace studiare matematica & & & & & \\
+  \hline
+  La matematica è utile nella vita quotidiana & & & & & \\
+  \hline
+  Preferirei non avere lezioni di matematica & & & & & \\
+  \hline
+  Trovo la matematica interessante & & & & & \\
+  \hline
+  Penso che la matematica sia utile anche per il mio futuro & & & & & \\
+  \hline
+  La matematica è una materia che mi motiva a dare il meglio & & & & & \\
+  \hline 
+  Non mi sento coinvolto/a durante le lezioni di matematica & & & & & \\
+  \hline
+  Vorrei approfondire la matematica oltre quello che facciamo a scuola & & & & & \\
+  \hline
+\end{tabularx}
+
+\vspace{1cm}
+
+\noindent\textbf{Istruzioni:} Valuta quanto sei d'accordo con le affermazioni proposte di seguito. Non ci sono risposte giuste o sbagliate.
+\newline
+
+% TABELLA 4 - CORRETTA CON TABULARX
+\noindent
+\begin{tabularx}{\textwidth}{|X|c|c|c|c|c|}
+  \hline
+  \textbf{Quanto sei d'accordo?} & \textbf{\scriptsize Per niente} & \textbf{\scriptsize Poco} & \textbf{\scriptsize Medio} & \textbf{\scriptsize Abbastanza} & \textbf{\scriptsize Molto} \\
+  \hline
+  Sono preoccupato/a che i miei compagni pensino che io abbia meno capacità matematiche a causa del mio genere & & & & & \\
+  \hline
+  Quando prendo un brutto voto in matematica temo che questo confermi lo stereotipo sul mio genere & & & & & \\
+  \hline
+  Penso che le ragazze non debbano occuparsi di matematica perchè non è adatta a loro & & & & & \\
+  \hline
+  Alcune volte penso che non dovrei essere bravo/a in matematica a causa del mio genere & & & & & \\
+  \hline
+  Mi preoccupo che la mia insegnante di matematica possa pensare che non sono bravo/a a causa del mio genere & & & & & \\
+  \hline
+  In matematica, i ragazzi hanno un talento naturale che le ragazze non possono compensare con l’impegno & & & & & \\
+  \hline 
+  Per ottenere gli stessi risultati in matematica i ragazzi devono impegnarsi di meno & & & & & \\
+  \hline
+  Le ragazze devono lavorare più dei ragazzi per ottenere gli stessi risultati in matematica & & & & & \\
+  \hline
+  Nonostante l’impegno, le ragazze restano mediamente meno brave in matematica dei ragazzi & & & & & \\
+  \hline
+\end{tabularx}
+
+\vspace{2cm}
+\centerline{\textit{Grazie per la partecipazione!}}
+
+\end{document}

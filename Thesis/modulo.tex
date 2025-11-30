@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{array}
+\usepackage{makecell}
+\setlength{\parindent}{0pt} % Rimuove l'indentazione all'inizio del paragrafo
+\renewcommand{\arraystretch}{1.5} % Aumenta l'altezza delle righe nelle tabelle
+\pagestyle{empty}
+% --- Definizione di una linea per la compilazione (RIDOTTE E SICURE) ---
+\newcommand{\linea}[1]{\makebox[#1]{\hrulefill}}
+\newcommand{\lineacorta}{\linea{3cm}} % Ulteriore riduzione per sicurezza
+\newcommand{\lineamedia}{\linea{5cm}} % Ulteriore riduzione per sicurezza
+\newcommand{\linealunga}{\linea{10cm}}
+% Linea estesa (occupa il 90% della larghezza rimanente)
+\newcommand{\lineaescesa}[1]{\par\vspace{-0.5em} \linea{\dimexpr\linewidth-2cm}}
+% ---------------------------------------------------
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Large MODULO DI RICHIESTA DI ISCRIZIONE ALLA COMUNANZA AGRARIA}
+\end{center}
+
+\vspace{0.5cm}
+
+\textbf{AL PRESIDENTE DELLA COMUNANZA AGRARIA DI SAN PELLEGRINO DI NORCIA}
+
+\vspace{0.5cm}
+
+Il/La sottoscritto/a, residente a San Pellegrino di Norcia (PG), con la presente chiede di essere iscritto/a quale \textbf{Utente} di codesta Comunanza Agraria e di usufruire dei servizi che tale Ente offre.
+
+\vspace{0.3cm}
+
+Inviando la richiesta dichiara di essere \textbf{residente all'interno del territorio dell'Ente da almeno 5 anni}.
+
+\vspace{0.5cm}
+
+\hrule
+\vspace{0.5cm}
+
+\textbf{\large DATI DEL RICHIEDENTE}
+
+\vspace{0.3cm}
+
+\begin{itemize}
+    \item Nome: \linealunga
+    \item Luogo di nascita: \lineamedia \quad Data di nascita: \lineacorta
+    \item Residente a San Pellegrino in: \linealunga \\
+    \small{(Indirizzo di residenza)}
+\end{itemize}
+
+\vspace{0.5cm}
+
+\hrule
+\vspace{0.5cm}
+
+\textbf{\large DICHIARAZIONE DELLO STATO DI FAMIGLIA}
+
+\vspace{0.3cm}
+
+Infine dichiaro che il proprio stato di famiglia è così costituito (vedi allegato) e che \textbf{nessuno} dei familiari elencati risulta essere Utente della Comunanza Agraria di San Pellegrino.
+
+\vspace{0.3cm}
+
+
+\vspace{1cm}
+
+
+\vspace{0.5cm}
+
+
+San Pellegrino di Norcia, lì \lineacorta \quad\quad\quad \\
+
+\vspace{1cm}
+
+Firma del Richiedente: \lineamedia
+
+
+
+\end{document}
