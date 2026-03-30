@@ -43,7 +43,9 @@ Her memory lives on through the many students she mentored, the colleagues who r
 
 \section{Mathematical Contributions}
 
-The mathematical work of Maryam Mirzakhani constitutes a systematic synthesis of hyperbolic geometry, complex analysis, topology, and dynamical systems. Her research is characterized by a geometric approach that reformulates complex algebraic and counting problems into global questions regarding the topology and geometry of moduli spaces. Her early research culminated in her 2007 papers on Weil-Petersson volumes, establishing the foundation for her later work on the moduli spaces of bordered Riemann surfaces (\cite{Mirzakhani2007a, Mirzakhani2007b}). 
+This section is not intended to provide full technical details, but rather to outline the main ideas and conceptual innovations in Mirzakhani's work, with technical aspects deferred to original sources.
+
+The mathematical work of Maryam Mirzakhani is characterized by an ability to connect different areas of mathematics, including hyperbolic geometry, topology, and dynamical systems. Rather than focusing on isolated problems, her approach reveals deep structural relationships, often transforming difficult counting questions into geometric problems on moduli spaces. Her early research culminated in her 2007 papers on Weil-Petersson volumes, establishing the foundation for her later work on the moduli spaces of bordered Riemann surfaces (\cite{Mirzakhani2007a, Mirzakhani2007b}). 
 
 This ability to construct structural bridges between distinct mathematical domains was recognized in 2014, when she became the first woman to be awarded the Fields Medal. The International Mathematical Union (IMU) stated:
 \begin{quote}
@@ -55,26 +57,28 @@ A unifying theme of her research is the translation of local geometric behaviors
 
 \subsection{Hyperbolic Geodesics: Beyond the Prime Geodesic Theorem}
 
-The study of geodesics on hyperbolic surfaces is a central topic in differential geometry and ergodic theory. By the Uniformization Theorem, any closed topological surface $S$ of genus $g \geq 2$ admits a hyperbolic metric of constant negative curvature $\kappa = -1$. On such surfaces, the distribution of closed geodesics exhibits chaotic behavior characterized by exponential growth.
+The study of geodesics on hyperbolic surfaces is a central topic in differential geometry and ergodic theory. By the Uniformization Theorem, any closed topological surface $S$ of genus $g \geq 2$ admits a hyperbolic metric of constant negative curvature $\kappa = -1$. On such surfaces, the distribution of primitive closed geodesics exhibits chaotic behavior characterized by exponential growth.
 
-In classical dynamical systems, it is well established that the number of all closed geodesics on a hyperbolic surface grows exponentially with respect to their length $L$.\footnote{The Prime Geodesic Theorem states that the number of closed geodesics $\pi(L)$ of length at most $L$ grows asymptotically as $\pi(L) \sim e^{L}/L$. This result is traditionally derived using the Selberg trace formula, establishing a deep analogy with the Prime Number Theorem in number theory,where the exponential growth reflects the high complexity of the geodesic flow.}
+In classical dynamical systems, it is well established that the number of all closed geodesics on a hyperbolic surface grows exponentially with respect to their length $L$.\footnote{The Prime Geodesic Theorem states that the number of closed geodesics $\pi(L)$ of length at most $L$ grows asymptotically as $\pi(L) \sim e^{L}/L$. This result is traditionally derived using the Selberg trace formula, establishing a non-trivial analogy with the Prime Number Theorem in number theory,where the exponential growth reflects the high complexity of the geodesic flow.}
 
 Mirzakhani addressed the more constrained and topologically rigid problem of counting \textit{simple} closed geodesics, defined as those without self-intersections.
 
-Counting simple geodesics presents a distinct challenge: as the length $L$ increases, a generic geodesic tends to become equidistributed on the surface, making the "simple" condition statistically rare. Mirzakhani proved that the number of simple closed geodesics $s_X(L)$ grows polynomially rather than exponentially. Specifically, she established the following asymptotic limit:
+Counting simple geodesics presents a distinct challenge: as the length $L$ increases, a generic geodesic tends to become equidistributed on the surface, making the "simple" condition statistically rare. Mirzakhani proved a striking contrast with the classical case: while general closed geodesics grow exponentially in number, simple closed geodesics ($s_X(L)$)grow only polynomially. Specifically, she established the following asymptotic limit:
 \begin{equation}
-    \lim_{L\to\infty} \frac{s_X(L)}{L^{6g-6}} = c_X. \footnote{The constant $c_X$ depends on the hyperbolic structure of $X$ and is expressed as an explicit Weil–Petersson integral: $c_X = \int_{\mathcal{M}_g} f_X \, \omega_{WP}^{3g-3}$, where $f_X$ is the frequency function introduced in Mirzakhani’s 2007 \textit{Inventiones Mathematicae} paper. This identity ties the counting of geodesics on a single surface directly to the volume geometry of the moduli space $\mathcal{M}_g$.}
+    \lim_{L\to\infty} \frac{s_X(L)}{L^{6g-6}} = c_X. 
 \end{equation}
-where the exponent $6g-6$ corresponds to the dimension of the relevant Teichmüller space $\mathcal{T}_g$. This result demonstrates that the density of simple geodesics is governed by the average behavior of these curves across the entire moduli space, establishing a rigorous link between individual surface geometry and global volume geometry.
+where $c_X$ is a constant depending on the geometry of the surface \footnote{The constant $c_X$ depends on the hyperbolic structure of $X$ and is expressed as an explicit Weil-Petersson integral: $c_X = \int_{\mathcal{M}_g} f_X \, \omega_{WP}^{3g-3}$, where $f_X$ is the frequency function introduced in Mirzakhani's 2007 \textit{Inventiones Mathematicae} paper. This identity ties the counting of geodesics on a single surface directly to the volume geometry of the moduli space $\mathcal{M}_g$.} and the exponent $6g-6$ corresponds to the real dimension of the relevant Teichmüller space $\mathcal{T}_g$.\footnote{The Teichmüller space $\mathcal{T}_g$ is the space of marked Riemann surfaces of genus $g$. It serves as the universal cover of the moduli space $\mathcal{M}_g$ and, as a real manifold, it is homeomorphic to $\mathbb{R}^{6g-6}$. The fact that the growth exponent of simple geodesics coincides with this dimension is a non-trivial consequence of the symplectic structure of $\mathcal{T}_g$ and the dynamics of the mapping class group.} 
+This highlights how imposing a geometric constraint—simplicity—drastically changes the complexity of the problem, revealing an unexpected order within an otherwise chaotic setting.
+This result reveals a deep link between the geometry of a single surface and the global structure of the moduli space, showing that counting problems can be understood through averaging processes over families of surfaces.
 
 \subsection{Pants Decomposition and Weil--Petersson Volumes}
-
+A key idea in Mirzakhani's work is to reduce complex geometric objects to simpler building blocks that can be systematically analyzed.
 To analyze the structure of the moduli space $\mathcal{M}_{g,n}$\footnote{$\mathcal{M}_{g,n}$ can be intuitively understood as the parameter space that parameterizes all possible hyperbolic structures (or "shapes") a surface of a given genus and number of boundaries can assume.} and compute the constants $c_X$, Mirzakhani utilized the topological method of \textit{pants decomposition}. Any hyperbolic surface $X$ of genus $g$ with $n$ boundary components can be partitioned along $3g-3+n$ disjoint simple closed geodesics into $2g-2+n$ elementary building blocks, known as \textit{pairs of pants} (spheres with three boundary components). 
 
 This decomposition allows for a "divide and conquer" approach: the problem of calculating the volume of a complex moduli space is broken down into the study of these simpler pieces.
 By parameterizing the surface through these blocks, Mirzakhani established a correspondence between the discrete problem of counting geodesics and the continuous evaluation of integrals over $\mathcal{M}_{g,n}$ equipped with the Weil-Petersson metric\footnote{The Weil-Petersson metric is a natural Kähler metric on the moduli space $\mathcal{M}_{g,n}$. For the purposes of this synthesis, its most relevant feature is the associated symplectic form $\omega_{WP}$. The volume $V_{g,n}$ is obtained by integrating the top power of this form over the moduli space: $V_{g,n} = \frac{1}{d!} \int_{\mathcal{M}_{g,n}} \omega_{WP}^d$, where $d = 3g-3+n$ is the complex dimension of $\mathcal{M}_{g,n}$.}. 
 
-The core analytical bridge between this topological decomposition and the calculation of volumes is a generalization of the McShane Identity. Mirzakhani's breakthrough was generalizing this identity to surfaces with arbitrary geodesic boundaries and genus.\footnote{The generalized identity expresses the length $\ell_1$ of a boundary component as a sum over all possible pairs of pants $P$ containing it. When integrated over the moduli space, this sum transforms into the integration kernel $K(\ell_1, \ell, \ell') = \sum_{\pm} (1 + \exp(\frac{\ell_1 + \ell \pm \ell'}{2}))^{-1}$, which is the "engine" of the recursion\cite{Mirzakhani2007b}.}
+The core analytical bridge enabling this topological decomposition and the calculation of volumes is a generalization of the McShane Identity. Mirzakhani's breakthrough was generalizing this identity to surfaces with arbitrary geodesic boundaries and genus.\footnote{The generalized identity expresses the length $\ell_1$ of a boundary component as a sum over all possible pairs of pants $P$ containing it. When integrated over the moduli space, this sum transforms into the integration kernel $K(\ell_1, \ell, \ell') = \sum_{\pm} (1 + \exp(\frac{\ell_1 + \ell \pm \ell'}{2}))^{-1}$, which is the "engine" of the recursion\cite{Mirzakhani2007b}.}
 
 This leads to a recursive formula where the volume $V_{g,n}(\mathbf{L})$ of $\mathcal{M}_{g,n}$ is expressed in terms of the volumes of moduli spaces of lower complexity. Mirzakhani proved that these volumes are polynomials in the square of the boundary lengths $\ell_i^2$:
 
@@ -86,23 +90,24 @@ where the coefficients $C_{\alpha}$ are deeply connected to the intersection the
 
 \subsection{A Geometric Proof of Witten's Conjecture}
 
-The recursive framework for Weil--Petersson volumes provided a new approach to a central problem in enumerative geometry and string theory. In 1991, Edward Witten conjectured that the intersection numbers of tautological classes on the Deligne--Mumford compactification of the moduli space, $\overline{\mathcal{M}}_{g,n}$, are governed by the Korteweg-de Vries (KdV) hierarchy. 
+Mirzakhani's work on Weil--Petersson volumes also led to a new geometric approach to a central problem in mathematical physics: Witten's conjecture. In 1991, Edward Witten conjectured that the intersection numbers of tautological classes on the Deligne--Mumford compactification of the moduli space, $\overline{\mathcal{M}}_{g,n}$, are governed by the Korteweg-de Vries (KdV) hierarchy. 
 
-While the first proof was provided by Maxim Kontsevich in 1992 using matrix models and combinatorial methods \cite{Kontsevich1992}, Mirzakhani developed a purely geometric proof \cite{Mirzakhani2007b}. Her approach established that the Weil--Petersson volumes $V_{g,n}(L)$ are polynomials in the boundary lengths $L_i^2$, whose coefficients are related to the intersection numbers of $\psi$-classes.\footnote{The relationship is given by the identity: $V_{g,n}(L) = \sum_{|\alpha| \leq 3g-3+n} \frac{\langle \tau_{\alpha_1} \dots \tau_{\alpha_n} \rangle}{\alpha! 2^{|\alpha|}} L_1^{2\alpha_1} \dots L_n^{2\alpha_n}$, where $\langle \tau_{\alpha_1} \dots \tau_{\alpha_n} \rangle$ denote the intersection numbers $\int_{\overline{\mathcal{M}}_{g,n}} \psi_1^{\alpha_1} \dots \psi_n^{\alpha_n}$.}
+While the first proof was provided by Maxim Kontsevich in 1992 using matrix models and combinatorial methods (\cite{Kontsevich1992}), Mirzakhani developed a purely geometric proof (\cite{Mirzakhani2007b}). Her approach established that the Weil--Petersson volumes $V_{g,n}(L)$ are polynomials in the boundary lengths $L_i^2$, whose coefficients are related to the intersection numbers of $\psi$-classes.\footnote{The relationship is given by the identity: $V_{g,n}(L) = \sum_{|\alpha| \leq 3g-3+n} \frac{\langle \tau_{\alpha_1} \dots \tau_{\alpha_n} \rangle}{\alpha! 2^{|\alpha|}} L_1^{2\alpha_1} \dots L_n^{2\alpha_n}$, where $\langle \tau_{\alpha_1} \dots \tau_{\alpha_n} \rangle$ denote the intersection numbers $\int_{\overline{\mathcal{M}}_{g,n}} \psi_1^{\alpha_1} \dots \psi_n^{\alpha_n}$.}
 
-Mirzakhani demonstrated that her recursive volume formula is equivalent to the Virasoro constraints, which in turn imply the KdV integration hierarchy.\footnote{By applying a multi-dimensional Laplace transform to the volume polynomials, Mirzakhani obtained a generating function that satisfies the same recursive relations as the tau-function of the KdV hierarchy. This established a direct link between the hyperbolic geometry of $\mathcal{M}_{g,n}$ and the integrable systems of mathematical physics \cite{Mirzakhani2007b}.} This result provided a transparent geometric interpretation of quantities previously understood primarily through combinatorial or physical intuitions.
+Mirzakhani showed that her recursive volume formula is equivalent to the Virasoro constraints. These constraints are known to encode the KdV hierarchy.\footnote{By applying a multi-dimensional Laplace transform to the volume polynomials, Mirzakhani obtained a generating function that satisfies the same recursive relations as the tau-function of the KdV hierarchy. \cite{Mirzakhani2007b}.} This provided a geometric bridge: the KdV hierarchy, once seen as a purely combinatorial or physical property of matrix models, was revealed to be a central consequence of the recursive geometry of hyperbolic surfaces.
+What makes this result particularly significant is that it uncovers a deep and unexpected connection between hyperbolic geometry and mathematical physics, linking geometric structures to integrable systems.
 
 \subsection{Dynamics on Moduli Spaces: The "Magic Wand" Theorem}
 
-In the later stages of her career, Mirzakhani's research shifted from the static geometry of moduli spaces to the dynamics of translation surfaces and rational billiards. This field centers on the ergodic properties of flows on surfaces: specifically, whether long-term trajectories equidistribute across the available space or remain confined to complex, fractal sets. 
+In the later stages of her career, Mirzakhani's research shifted from the static geometry of moduli spaces to the dynamics of translation surfaces and rational billiards. This field centers on the ergodic properties of flows on surfaces: whether long-term trajectories equidistribute across the available space or remain confined to complex, fractal sets. 
 In collaboration with Alex Eskin and Amir Mohammadi, Mirzakhani addressed the classification of orbit closures under the $SL(2,\mathbb{R})$ action on the moduli space of Abelian differentials\footnote{Abelian differentials are strictly related to "translation surfaces"—geometric objects formed by identifying opposite sides of polygons in the plane. This framework allows the translation of the dynamical behavior of a ball in a rational billiard into the study of a flow on a complex surface.}. 
-They established a fundamental rigidity theorem, proving that orbit closures are not pathological fractal sets but are instead highly structured algebraic objects.
+They established a core rigidity theorem, proving that orbit closures are not arbitrary or chaotic sets, but instead exhibit a surprisingly rigid and structured geometric nature. In other words, phenomena that initially appear chaotic are in fact governed by hidden geometric constraints.
 
 \begin{theorem}[Eskin--Mirzakhani--Mohammadi, 2015]
 Every $SL(2,\mathbb{R})$-orbit closure in the moduli space of Abelian differentials is an affine invariant submanifold.
 \end{theorem}
 
-This result, colloquially known as the ``Magic Wand'' theorem, implies that these orbit closures are locally defined by linear equations with real coefficients in period coordinates.\footnote{The theorem represents an analogue of Ratner’s theorems for unipotent flows on homogeneous spaces, but applied to the much more complex setting of non-homogeneous moduli spaces. For the complete proof and its implications for the illumination problem in rational polygons, see \cite{EskinMirzakhaniMohammadi2015}.} The theorem provides a definitive constraint on the dynamical behavior of translation surfaces, eliminating the possibility of infinitely complex or chaotic orbit geometries.
+This result, colloquially known as the "Magic Wand" theorem, implies that these orbit closures are complex dynamic objects that behave like algebraic subvarieties, defined locally by linear equations in period coordinates.\footnote{The theorem represents an analogue of Ratner's theorems for unipotent flows on homogeneous spaces, but applied to the much more complex setting of non-homogeneous moduli spaces. For the complete proof and its implications for the illumination problem in rational polygons, see \cite{EskinMirzakhaniMohammadi2015}.} The theorem provides a definitive constraint on the dynamical behavior of translation surfaces, showing that orbit closures have a highly rigid and structured form. It provided major progress on several long-standing problems, including the "illumination problem" in rational polygons, by showing that the movement of a particle (or light ray) in such a system is governed by precise algebraic constraints.
 
 \subsection{Large Genus Asymptotics}
 
@@ -112,7 +117,9 @@ She provided precise asymptotic bounds, demonstrating that these volumes exhibit
 \begin{equation}
     V_g \sim C \cdot (2g)! \cdot (2\pi^2)^{-g} \cdot g^{-1/2}
 \end{equation}
-where $C$ is a universal constant.\footnote{For the detailed derivation of the $g^{2g}$ growth rate and the precise constants involved in the large-genus limit, see Mirzakhani (2013) \cite{Mirzakhani2013}. This result characterizes the statistical properties of "typical" hyperbolic surfaces of high genus.} This research direction provides a bridge between the enumerative geometry of moduli spaces and the spectral theory of large-order random surfaces.
+where $V_g$ denotes the volume of $\mathcal{M}_{g,0}$ and $C$ is a universal constant.\footnote{The precise identification of the constant $C$ and the derivation of the $(2g)!$ growth rate were established in Mirzakhani's 2013 paper in the \textit{Journal of Differential Geometry}. This result allows for the characterization of the statistical properties of "typical" hyperbolic surfaces as the genus becomes arbitrarily large \cite{Mirzakhani2013}.} 
+This asymptotic behavior suggests that, as the complexity of the surface increases, its geometric properties begin to exhibit regular statistical patterns, analogous to phenomena studied in statistical physics.
+This research provides a bridge between the enumerative geometry of moduli spaces and the spectral theory of large-order random surfaces.
 
 \subsection*{Summary and Methodological Implications}
 
@@ -120,25 +127,24 @@ The primary milestones of Maryam Mirzakhani's research are summarized in Table \
 
 \begin{table}[htbp]
 \centering
-\caption{Summary of Mirzakhani's main contributions and methodologies.}
+\caption{Synthesis of Mirzakhani's mathematical milestones and didactic-methodological insights.}
 \label{tab:mirzakhani_results}
-\vspace{0.2cm}
+\vspace{0.3cm}
 \small
-\begin{tabular}{|l|l|}
-\hline
-\textbf{Result} & \textbf{Methodological Approach} \\
-\hline
-Simple geodesic counting & Polynomial growth $L^{6g-6}$ via WP volumes \\
-\hline
-WP volume recursion & Generalized McShane identity integration \\
-\hline
-Witten conjecture proof & Laplace transform and KdV hierarchy \\
-\hline
-Large genus asymptotics & Asymptotic analysis for $g \to \infty$ \\
-\hline
-Orbit closure classification & Affine invariant submanifolds (Magic Wand)\\
-\hline
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Mathematical Domain} & \textbf{Key Contribution} & \textbf{Methodological/Didactic Insight} \\ \midrule
+\textbf{Hyperbolic Geometry} & Simple geodesic growth ($L^{6g-6}$) & \textbf{Visual-Counting Symmetry:} \\
+& & Connecting discrete counts to volumes. \\ \addlinespace
+\textbf{Moduli Spaces} & Weil-Petersson volume recursion & \textbf{Structural Decomposition:} \\
+& & \textit{Pants decomposition} as a building block. \\ \addlinespace
+\textbf{Mathematical Physics} & Proof of Witten’s Conjecture & \textbf{Cross-Domain Synthesis:} \\
+& & Linking KdV hierarchy to surfaces. \\ \addlinespace
+\textbf{Ergodic Theory} & Orbit closure ("Magic Wand") & \textbf{Dynamic Rigidity:} \\
+& & Finding order within chaotic systems. \\ \addlinespace
+\textbf{Asymptotic Analysis} & Large genus limits ($g \to \infty$) & \textbf{Statistical Regularity:} \\
+& & Patterns emerging from complexity. \\ \bottomrule
 \end{tabular}
 \end{table}
 
-Mirzakhani’s work has left a transformative mark on modern mathematics, providing tools that continue to drive research in enumerative geometry and dynamical systems. From the perspective of \textit{Mathematics Education}, her legacy emphasizes the role of **visual intuition** as a rigorous heuristic tool. By reducing abstract problems on high-dimensional moduli spaces to the structural decomposition of surfaces (e.g., pants decomposition), she demonstrated that geometric imagination is not merely illustrative, but a fundamental component of mathematical discovery. Her methodology serves as a testament to the synergy between visual creativity and formal rigor.
+Mirzakhani's work has left a transformative mark on modern mathematics, providing tools that continue to drive research in enumerative geometry and dynamical systems. From the perspective of \textit{Mathematics Education}, her legacy emphasizes the role of **visual intuition** as a rigorous heuristic tool. By reducing abstract problems on high-dimensional moduli spaces to the structural decomposition of surfaces (e.g., pants decomposition), she demonstrated that geometric imagination is not merely illustrative, but an essential component of mathematical discovery. Her methodology serves as a testament to the synergy between visual creativity and formal rigor.
