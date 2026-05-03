@@ -28,4 +28,4 @@ _build/
 latex.out/
 
 # Escludere pdf generati automaticamente (se vuoi tenerne solo uno finale)
-*.pdf
+main.pdf
