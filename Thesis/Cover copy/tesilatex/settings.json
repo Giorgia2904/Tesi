@@ -1,0 +1,38 @@
+{
+    "python.defaultInterpreterPath": "C:\\Users\\giogg\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "breadcrumbs.enabled": false,
+
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": ["-synctex=1", "-interaction=nonstopmode", "%DOC%"]
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": ["%DOCFILE%"]
+        }
+    ],
+
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex + Biber",
+            "tools": ["pdflatex", "biber", "pdflatex", "pdflatex"]
+        }
+    ],
+
+    "latex-workshop.latex.recipe.default": "pdflatex + Biber",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+
+    "latex-workshop.view.pdf.viewer": "tab",
+    "latex-workshop.view.pdf.ref.viewer": "auto",
+
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.synctex.synctexjs.enabled": true,
+
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    }
+}
