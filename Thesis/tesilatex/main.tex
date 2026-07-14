@@ -69,6 +69,7 @@
 \usepackage{minted}
 
 \usepackage{changepage} % Serve per allargare le tabelle senza rompere i margini
+\usepackage{afterpage}%pagine bianche finali
 
 % biblatex is useful because it autodetects unused references
 % and sorts used ones by occurrence.
@@ -173,5 +174,6 @@
 % FinalDedication
 %*******************************************************
 \input{back/FinalDedication}
-
+\afterpage{\null\thispagestyle{empty}\newpage}
+\afterpage{\null\thispagestyle{empty}\newpage}
 \end{document}
